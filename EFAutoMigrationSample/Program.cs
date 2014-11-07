@@ -13,8 +13,6 @@ public class User
     public int UserId { get; set; }
     public string Name { get; set; }
     public int Age { get; set; }
-    [Required]
-    public string Note { get; set; }
     public override string ToString() { return JsonConvert.SerializeObject(this); }
 }
 

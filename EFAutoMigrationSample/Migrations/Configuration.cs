@@ -10,6 +10,7 @@ namespace EFAutoMigrationSample.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "MyDb";
         }
 
