@@ -13,22 +13,12 @@ public class User
     public int UserId { get; set; }
     public string Name { get; set; }
     public int Age { get; set; }
-    public virtual ICollection<Photo> Photos { get; set; }
-    public override string ToString() { return JsonConvert.SerializeObject(this); }
-}
-
-public class Photo
-{
-    public int PhotoId { get; set; }
-    public int UserId { get; set; }
-    public byte[] PhotoData { get; set; }
     public override string ToString() { return JsonConvert.SerializeObject(this); }
 }
 
 public class MyDb : DbContext
 {
     public DbSet<User> Users { get; set; }
-    public DbSet<Photo> Photos { get; set; }
 }
 
 class Program
